@@ -1,0 +1,268 @@
+@import url('https://fonts.cdnfonts.com/css/cocogoose');
+
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+
+}
+
+@font-face {
+  font-family: 'cocogoose'; /* Nome que você usará no CSS */
+  src: url(./font/COCOGOOSE__UltraLight/Cocogoose_Pro_Ultralight-trial.ttf) format('woff2'); /* Caminho do arquivo */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat'; /* Nome que você usará no CSS */
+  src: url(./font/Montserrat-SemiBold/montserrat/Montserrat-Regular.ttf) format('woff2'); /* Caminho do arquivo */
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+--fundo: #00091D;
+--branco: #FFFFFF;
+--azul: #07D7FA;
+--azul-escuro: #0B0B4C;
+--Azul-escuro-escuro: #0A0A3D;
+--roxo: #AE00FF;
+}
+
+.espaco_lateral{
+
+width: 78%;
+max-width: 1280px;
+margin: 0 auto;
+}
+
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+    background-color: var(--fundo);
+}
+
+header img{
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.titulo{
+    color: var(--branco);
+    text-align: center;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-family: cocogoose;
+    font-size: 95%;
+    
+}
+
+span{
+    color: var(--azul);
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+     align-items: center;    
+      margin-top: 30px;
+
+position: absolute;
+    height: auto;
+    z-index: 2; /* Z-index maior garante que ele fique na frente */
+    
+position: relative;
+top: 3px;
+}
+
+
+/* Ajustes para aumentar proporção do vídeo e torná-lo responsivo */
+.video iframe,
+.video video,
+.video .embed{
+    width: min(1040px, 70vw);
+    max-width: 1400px;
+    aspect-ratio: 16/9;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .video{
+        padding: 0 10px;
+    }
+    .video iframe,
+    .video video,
+    .video .embed{
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16/9;
+    }
+}
+
+.texto{
+    margin-top: 30px;
+    color: var(--branco);
+     text-align: center;
+    text-transform: uppercase;
+    font-family: cocogoose;
+    font-size: 90%;
+    left: 33%;
+    margin-bottom: 20px;
+
+    line-height: 35px;
+
+    position: absolute;
+    height: auto;
+    z-index: 2; /* Z-index maior garante que ele fique na frente */
+}
+
+
+
+
+
+
+
+/* Sombra decorativa abaixo do logo - ocupa grande espaço */
+.sombra{
+    width: min(100vw, 800px);
+    max-height: 68vh;
+position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    margin: -5px 0 0;
+    object-fit: contain;
+
+}
+
+/* Logo sombra no canto inferior esquerdo - tamanho grande */
+.logo-sombra{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: clamp(250px, 40vw, 600px);
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+
+ 
+
+}
+
+@media (max-width: 768px) {
+  .logo-sombra{
+    width: clamp(150px, 35vw, 400px);
+  }
+}
+
+
+    
+.trilha{
+     position: absolute;
+    bottom: 48px;         /* Cola o texto na base do body */
+    left: -5%;
+    width: 100%;       /* Opcional: faz o texto ocupar toda a largura */
+    text-align: center; /* Opcional: centraliza o texto */
+    color: var(--azul);
+    text-transform: uppercase;
+    font-family: cocogoose;
+    margin-top: 30px;
+    font-size: 19px;
+    
+    margin-bottom: 40px;
+}
+
+.botao-avancar button{
+
+     position: absolute;
+    height: auto;
+    z-index: 2; /* Z-index maior garante que ele fique na frente */
+    justify-content: center;
+    align-items: center;
+    margin-top: 135px;
+    right: 38%;
+
+
+
+    background: linear-gradient(135deg, #07D7FA 0%, #228AB9 100%);
+    border: none;
+    color: var(--branco);
+    font-family: cocogoose;
+    font-size: 130%;
+    text-transform: uppercase;
+    padding: 18px 54px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 14px 30px rgba(7, 215, 250, 0.24);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    
+}
+
+.botao-avancar button:hover{
+    transform: translateY(-2px);
+    opacity: 0.96;
+ }
+
+ 
+
+
+
+.rodape{
+    text-align: center;        /* Centraliza o texto */
+    position: absolute;
+    bottom: 0;         /* Cola o texto na base do body */
+    left: 950px;
+    margin-top: 22%;
+    color: var(--branco);
+    font-family: "montserrat";
+    margin-bottom: 15px;
+    font-size: 12px;
+    
+   
+
+    position: absolute;
+    height: auto;
+    z-index: 2; /* Z-index maior garante que ele fique na frente */      
+}
+
+.btn-voltar {
+    position: fixed;
+    top: 20px;
+    left: 500px;
+    margin-top: 15px;
+    z-index: 30;
+    background-color: rgba(7, 215, 250, 0.2);
+    border: 2px solid var(--azul);
+    color: var(--branco);
+    padding: 10px 16px;
+    font-size: 16px;
+    font-family: "cocogoose", sans-serif;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    text-transform: uppercase;
+    width: 124px;
+
+   
+}
+
+
+.btn-voltar:hover {
+    background: linear-gradient(135deg, #07D7FA 0%, #228AB9 100%);
+     box-shadow: 0 14px 30px rgba(7, 215, 250, 0.24);
+    transform: translateX(-3px);
+}
+
+.btn-voltar:active {
+    transform: translateX(-5px);
+}
+
